@@ -1,3 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
@@ -45,9 +52,11 @@ body {
 
 /* HERO */
 .hero {
-  text-align: center;
-  padding: 20px 20px 60px;
   margin-top: 70px; 
+  padding: 10px 20px 40px;
+  text-align: center;
+  
+  
 }
 
 /* HEADLINE FIX */
