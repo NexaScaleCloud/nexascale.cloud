@@ -1,79 +1,135 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Microsoft 365 - NexaScale</title>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-<link rel="stylesheet" href="style.css">
+body {
+  font-family: 'Inter', sans-serif;
+  background: #020617;
+  color: white;
+}
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Orbitron:wght@500&display=swap" rel="stylesheet">
+/* CANVAS */
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+/* NAVBAR */
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  background: rgba(2,6,23,0.7);
+}
 
-</head>
+.logo {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
 
-<body>
+/* HERO */
+.hero {
+  margin-top: 70px;
+  text-align: center;
+  padding: 30px;
+}
 
-<canvas id="network"></canvas>
+.hero.small {
+  padding: 20px;
+}
 
-<!-- NAVBAR -->
-<header class="nav">
-    <a href="index.html" class="logo">NexaScale</a>
-</header>
+.headline {
+  font-size: 40px;
+}
 
-<!-- HERO -->
-<section class="hero">
-  <h1 class="headline">
-    Microsoft 365 <span>Services</span>
-  </h1>
+.headline span {
+  color: #38bdf8;
+}
 
-  <p class="cloud-text">Productivity • Security • Collaboration</p>
-</section>
+/* SECTION */
+.dual-section {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
 
-<!-- SERVICES DETAILS -->
-<section class="dual-section">
+.box {
+  flex: 1;
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border-radius: 15px;
+}
 
-  <div class="box">
-    <h2>What We Offer</h2>
-    <div class="grid">
-<div class="card" onclick="showService('email')">
-  Business Email Setup
-</div>
-      <div class="card">Teams Integration</div>
-      <div class="card">SharePoint Setup</div>
-      <div class="card">OneDrive Configuration</div>
-    </div>
-  </div>
+.box h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
 
-  <div class="box">
-    <h2>Advanced Services</h2>
-    <div class="grid">
-      <div class="card">Security & Compliance</div>
-      <div class="card">Migration Services</div>
-      <div class="card">User Management</div>
-      <div class="card">License Optimization</div>
-    </div>
-  </div>
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 10px;
+}
 
-</section>
+.card {
+  padding: 15px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+}
 
-<!-- BACK BUTTON -->
-<div style="text-align:center; margin-top:30px;">
-    <a href="index.html" class="btn back-btn">
-  ← Back to Home
-</a>
-</div>
+.card:hover {
+  background: rgba(255,255,255,0.15);
+}
 
-<!-- SOCIAL -->
-<div class="social-bar">
-  <a href="https://wa.me/919876543210" target="_blank"><i class="fab fa-whatsapp"></i></a>
-  <a href="#"><i class="fab fa-linkedin-in"></i></a>
-  <a href="#"><i class="fab fa-instagram"></i></a>
-  <a href="#"><i class="fab fa-facebook-f"></i></a>
-</div>
+/* DETAIL GLASS BOX */
+.detail-box {
+  display: none;
+  margin: 30px auto;
+  padding: 25px;
+  max-width: 800px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 15px;
+}
 
-<script src="script.js"></script>
+.detail-section {
+  margin-top: 15px;
+}
 
-</body>
-</html>
+.detail-section h3 {
+  color: #38bdf8;
+  margin-bottom: 5px;
+}
+
+.detail-section ul {
+  padding-left: 20px;
+}
+
+.detail-section li {
+  margin: 5px 0;
+}
+
+/* LINK FIX */
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:visited,
+a:hover,
+a:active {
+  color: white;
+}
