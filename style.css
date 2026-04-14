@@ -229,4 +229,32 @@ a:active {
   line-height: 1.5;
 }
 
+/* CURSOR GLOW EFFECT */
+.box, .card {
+  position: relative;
+  overflow: hidden;
+}
+
+/* GLOW LAYER */
+.box::before,
+.card::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(56,189,248,0.25), transparent 70%);
+  top: var(--y, 50%);
+  left: var(--x, 50%);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: 0.1s;
+}
+
+/* HOVER LIFT */
+.box:hover,
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+
 
