@@ -204,4 +204,8 @@ a:active {
   box-shadow: 0 12px 35px rgba(99, 102, 241, 0.5);
   background: linear-gradient(90deg, #6366f1, #38bdf8);
 }
+.back-container {
+  text-align: center;
+  margin: 40px 0;
+}
 
