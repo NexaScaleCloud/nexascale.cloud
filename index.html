@@ -3,112 +3,86 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>NexaScale</title>
 
 <link rel="stylesheet" href="style.css">
-
-<!-- Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<!-- Icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
-
 <body>
 
-<!-- NETWORK -->
 <canvas id="network"></canvas>
-
-<!-- PARALLAX -->
-<div class="parallax-bg"></div>
-<div class="parallax-layer layer1"></div>
-<div class="parallax-layer layer2"></div>
 
 <!-- NAVBAR -->
 <div class="navbar">
-    <div class="logo">NexaScale</div>
-    <div class="menu">
-        <a href="#services">Services</a>
-        <a href="#solutions">Solutions</a>
-        <a href="#contact">Contact</a>
-    </div>
+  <div class="logo">NexaScale</div>
+  <div class="menu">
+    <a href="#services">Services</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#contact">Contact</a>
+  </div>
 </div>
 
 <!-- HERO -->
 <section class="hero">
-    <h1>Build the Future on <br><span>Cloud Infrastructure</span></h1>
-    <p>Azure • AWS • Google Cloud</p>
-    <a href="#contact" class="btn">Get Started</a>
+  <h1>Build the Future on <br><span>Cloud Infrastructure</span></h1>
+  <p>Azure • AWS • Google Cloud</p>
+  <a href="#contact" class="btn">Get Started</a>
 </section>
 
 <!-- SERVICES -->
 <section id="services" class="section">
-    <h2>Cloud Services</h2>
-    <div class="grid">
-        <div class="card">Microsoft 365</div>
-        <div class="card">Azure</div>
-        <div class="card">AWS</div>
-        <div class="card">Google Cloud</div>
-    </div>
-</section>
-
-<!-- SOLUTIONS -->
-<section id="solutions" class="section">
-    <h2>Solutions</h2>
-    <div class="grid">
-        <div class="card">Migration</div>
-        <div class="card">Security</div>
-        <div class="card">Optimization</div>
-        <div class="card">Automation</div>
-    </div>
+  <h2>Cloud Services</h2>
+  <div class="grid">
+    <div class="card">Microsoft 365</div>
+    <div class="card">Azure</div>
+    <div class="card">AWS</div>
+    <div class="card">Google Cloud</div>
+  </div>
 </section>
 
 <!-- PRICING -->
-<section class="section">
-    <h2>Pricing</h2>
-    <div class="grid">
-        <div class="card">
-            <h3>Starter</h3>
-            <p>$49/mo</p>
-        </div>
-        <div class="card">
-            <h3>Pro</h3>
-            <p>$149/mo</p>
-        </div>
-        <div class="card">
-            <h3>Enterprise</h3>
-            <p>Custom</p>
-        </div>
+<section id="pricing" class="section">
+  <h2>Pricing</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Starter</h3>
+      <p>$49/mo</p>
     </div>
+    <div class="card">
+      <h3>Pro</h3>
+      <p>$149/mo</p>
+    </div>
+    <div class="card">
+      <h3>Enterprise</h3>
+      <p>Custom</p>
+    </div>
+  </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact" class="section">
-    <h2>Contact</h2>
-    <form action="https://formspree.io/f/your-id" method="POST">
-        <input type="text" placeholder="Name" required>
-        <input type="email" placeholder="Email" required>
-        <textarea placeholder="Message"></textarea>
-        <button type="submit">Send</button>
-    </form>
+  <h2>Contact</h2>
+  <form action="https://formspree.io/f/your-id" method="POST">
+    <input type="text" name="name" placeholder="Name" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <textarea name="message" placeholder="Message"></textarea>
+    <button type="submit">Send</button>
+  </form>
 </section>
 
 <footer>© NexaScale 2026</footer>
 
 <!-- SOCIAL -->
 <div class="social-bar">
-    <a href="https://wa.me/919876543210" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
-    <a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
-    <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
-    <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+  <a href="https://wa.me/919876543210" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+  <a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
+  <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+  <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
 </div>
 
-<!-- GSAP -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-
 <script src="script.js"></script>
 
 </body>
