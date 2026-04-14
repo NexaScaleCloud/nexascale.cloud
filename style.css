@@ -77,9 +77,21 @@ canvas {
 
 .box {
   flex: 1;
+  min-width: 260px; /* slightly smaller */
+  max-width: 420px; /* 🔥 reduced from 500px */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
   background: rgba(255,255,255,0.05);
-  padding: 20px;
-  border-radius: 15px;
+  backdrop-filter: blur(20px);
+
+  border-radius: 20px;
+  padding: 20px; /* slightly reduced */
+
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: 0.3s;
 }
 
 .box h2 {
@@ -89,8 +101,8 @@ canvas {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
-  gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px; /* reduced from 15px */
 }
 
 .card {
