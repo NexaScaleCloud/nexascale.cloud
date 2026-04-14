@@ -244,10 +244,6 @@ canvas {
   font-size: 20px;
   font-weight: 600;
   letter-spacing: 1px;
-
-  color: white;
-  text-decoration: none; /* removes underline */
-
   cursor: pointer;
 }
 
@@ -257,6 +253,20 @@ canvas {
 .logo:active {
   color: white;
 }
+
+
+/* FORCE ALL LINKS TO STAY WHITE */
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:visited,
+a:hover,
+a:active {
+  color: white;
+}
+
 
 
 
