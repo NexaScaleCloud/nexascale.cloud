@@ -147,18 +147,26 @@ canvas {
 }
 
 .social-bar a {
-  width: 45px;
-  height: 45px;
+  width: 50px;
+  height: 50px;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50%;
-  color: white;
-  transition: 0.3s;
-}
 
-.social-bar a:hover {
-  transform: scale(1.1);
+  border-radius: 50%;
+
+  /* GLASS EFFECT */
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  color: white;
+  font-size: 18px;
+
+  transition: all 0.3s ease;
 }
 
 
