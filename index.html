@@ -1,54 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NexaScale Cloud</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: #0f172a;
-            color: #ffffff;
-            text-align: center;
-        }
-        header {
-            padding: 60px 20px;
-        }
-        h1 {
-            font-size: 40px;
-            margin-bottom: 10px;
-        }
-        p {
-            color: #cbd5f5;
-        }
-        .section {
-            padding: 40px 20px;
-        }
-        .services {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-        .card {
-            background: #1e293b;
-            padding: 20px;
-            border-radius: 10px;
-            width: 250px;
-        }
-        footer {
-            padding: 20px;
-            font-size: 14px;
-            color: #94a3b8;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NexaScale Cloud</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to top, #0f172a, #1e3a8a);
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* Floating clouds */
+.cloud {
+    position: absolute;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    animation: float 60s linear infinite;
+}
+
+.cloud:nth-child(1) { width: 200px; height: 80px; top: 10%; left: -200px; }
+.cloud:nth-child(2) { width: 300px; height: 100px; top: 30%; left: -300px; animation-duration: 80s; }
+.cloud:nth-child(3) { width: 250px; height: 90px; top: 60%; left: -250px; animation-duration: 70s; }
+
+@keyframes float {
+    from { transform: translateX(0); }
+    to { transform: translateX(120vw); }
+}
+
+/* Header animation */
+header {
+    padding: 100px 20px;
+    animation: fadeIn 2s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+    font-size: 48px;
+}
+
+.section {
+    padding: 50px 20px;
+}
+
+/* Cards */
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.card {
+    background: rgba(255,255,255,0.08);
+    padding: 25px;
+    border-radius: 12px;
+    width: 260px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #38bdf8;
+    color: black;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #0ea5e9;
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    font-size: 14px;
+    color: #cbd5f5;
+}
+</style>
+
 </head>
 <body>
 
+<!-- Clouds -->
+<div class="cloud"></div>
+<div class="cloud"></div>
+<div class="cloud"></div>
+
 <header>
-    <h1>NexaScale Cloud</h1>
+    <h1>☁️ NexaScale Cloud</h1>
     <p>Scaling Your Cloud. Simplifying Your Growth.</p>
+    <a href="mailto:info@nexascale.cloud" class="btn">Contact Us</a>
 </header>
 
 <section class="section">
@@ -62,8 +124,8 @@
 </section>
 
 <section class="section">
-    <h2>Contact Us</h2>
-    <p>Email: info@nexascale.cloud</p>
+    <h2>Why Choose Us</h2>
+    <p>We deliver scalable, secure, and cost-efficient cloud solutions tailored to your business needs.</p>
 </section>
 
 <footer>
