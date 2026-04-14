@@ -36,7 +36,7 @@ animate();
 
 
   // CURSOR GLOW FOLLOW EFFECT
-document.querySelectorAll(".box, .card").forEach(el => {
+document.querySelectorAll(".box, .card, .back-btn").forEach(el => {
   el.addEventListener("mousemove", e => {
     const rect = el.getBoundingClientRect();
     const x = e.clientX - rect.left;
