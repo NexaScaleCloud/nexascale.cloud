@@ -179,3 +179,7 @@ canvas {
     white-space: normal;
   }
 }
+
+.logo {
+  color: red;
+}
