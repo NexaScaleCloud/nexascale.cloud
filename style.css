@@ -71,12 +71,12 @@ canvas {
 
   padding: 20px;
 
-  max-width: 1000px; /* balanced width */
+  max-width: 1500px; /* balanced width */
   margin: 20px auto;
 }
 
 .box {
-  width: 420px;   /* ✅ fixed width (boxy look) */
+  width: 480px;   /* ✅ fixed width (boxy look) */
   flex: none;     /* ❗ removes stretching */
 
   display: flex;
@@ -87,7 +87,7 @@ canvas {
   backdrop-filter: blur(20px);
 
   border-radius: 20px;
-  padding: 25px;
+  padding: 40px;
 
   border: 1px solid rgba(255,255,255,0.1);
   transition: 0.3s;
@@ -101,11 +101,11 @@ canvas {
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 12px; /* reduced from 15px */
+  gap: 20px; /* reduced from 15px */
 }
 
 .card {
-  padding: 15px;
+  padding: 30px;
   background: rgba(255,255,255,0.08);
   border-radius: 10px;
   text-align: center;
