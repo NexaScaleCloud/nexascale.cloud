@@ -1,19 +1,28 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-
+/* BODY */
 body {
-  margin: 0;
   font-family: 'Inter', sans-serif;
   background: #020617;
   color: white;
 }
 
-/* NAVBAR FIX */
-/* NAVBAR CLEAN FIX */
+/* FIX CANVAS (IMPORTANT) */
+#network {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* NAVBAR */
 .nav {
   position: fixed;
   top: 0;
@@ -36,30 +45,21 @@ body {
   font-size: 20px;
   font-weight: 600;
   letter-spacing: 1px;
-  color: white;
 }
 
-
-.menu {
-  display: flex;
-  gap: 20px;
-}
-
-.menu a {
-  color: white;
-  text-decoration: none;
-}
-
-/* HERO */
+/* HERO (MAIN FIX HERE) */
 .hero {
-  margin-top: 70px; 
-  padding: 10px 20px 40px;
+  margin-top: 70px; /* equal to navbar */
+  padding: 20px 20px 40px;
   text-align: center;
-  
-  
 }
 
-/* HEADLINE FIX */
+/* 🔥 REMOVE DEFAULT H1 GAP */
+h1 {
+  margin: 0;
+}
+
+/* HEADLINE */
 .headline {
   font-size: 48px;
   white-space: nowrap;
@@ -82,12 +82,14 @@ body {
 .cloud-text {
   font-family: 'Orbitron', sans-serif;
   letter-spacing: 2px;
-  margin-top: 15px;
+  margin-top: 10px;
   color: #38bdf8;
 }
 
 /* BUTTON */
 .btn {
+  display: inline-block;
+  margin-top: 15px;
   padding: 12px 25px;
   background: #38bdf8;
   border-radius: 25px;
@@ -95,27 +97,23 @@ body {
   color: black;
 }
 
-.btn.large {
-  padding: 15px 40px;
-}
-
-/* REMOVE EXTRA SPACE */
+/* SECTIONS */
 .section {
-  padding: 60px 20px;
+  padding: 50px 20px;
 }
 
-/* SIDE BY SIDE BOX */
+/* SIDE BY SIDE */
 .dual-section {
   display: flex;
-  gap: 30px;
-  padding: 40px;
+  gap: 20px;
+  padding: 40px 20px;
   flex-wrap: wrap;
 }
 
 .box {
   flex: 1;
   background: rgba(255,255,255,0.05);
-  padding: 25px;
+  padding: 20px;
   border-radius: 20px;
 }
 
@@ -138,17 +136,10 @@ body {
   transform: translateY(-5px);
 }
 
-/* CLICKABLE PRICING */
-.clickable {
-  text-decoration: none;
-  color: white;
-  cursor: pointer;
-}
-
-/* CONTACT NEW STYLE */
+/* CONTACT */
 .contact-box {
   text-align: center;
-  padding: 80px 20px;
+  padding: 60px 20px;
 }
 
 /* SOCIAL */
