@@ -1,15 +1,9 @@
-/* =========================
-   RESET
-========================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* =========================
-   BODY
-========================= */
 body {
   font-family: 'Inter', sans-serif;
   background: #020617;
@@ -17,59 +11,32 @@ body {
   overflow-x: hidden;
 }
 
-/* =========================
-   BACKGROUND CANVAS
-========================= */
-#network {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-
-/* =========================
-   NAVBAR
-========================= */
+/* NAVBAR */
 .nav {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 70px;
-
   display: flex;
   align-items: center;
-  justify-content: flex-end; /* RIGHT SIDE */
-
-  padding-right: 40px;
-
+  justify-content: flex-end; /* move to right */
+  padding: 0 40px;
   background: rgba(2, 6, 23, 0.7);
   backdrop-filter: blur(10px);
-
   z-index: 1000;
 }
 
-/* LOGO */
 .logo {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 600;
-  letter-spacing: 1px;
 }
 
-/* =========================
-   HERO SECTION
-========================= */
+/* HERO */
 .hero {
-  margin-top: 70px; /* exact navbar height */
-  padding: 20px 20px 40px;
+  margin-top: 80px; /* fix top gap */
+  padding: 40px 20px;
   text-align: center;
-}
-
-/* REMOVE DEFAULT H1 SPACE */
-h1 {
-  margin: 0;
 }
 
 /* HEADLINE */
@@ -78,15 +45,13 @@ h1 {
   white-space: nowrap;
 }
 
-/* GRADIENT TEXT */
 .headline span {
-  background: linear-gradient(90deg, #38bdf8, #6366f1);
+  background: linear-gradient(90deg,#38bdf8,#6366f1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: glow 4s infinite linear;
 }
 
-/* ANIMATION */
 @keyframes glow {
   0% { filter: brightness(1); }
   50% { filter: brightness(1.5); }
@@ -97,88 +62,63 @@ h1 {
 .cloud-text {
   font-family: 'Orbitron', sans-serif;
   letter-spacing: 2px;
-  margin-top: 10px;
+  margin-top: 15px;
   color: #38bdf8;
 }
 
-/* BUTTON */
-.btn {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 12px 25px;
-  background: #38bdf8;
-  border-radius: 25px;
-  text-decoration: none;
-  color: black;
+/* SECTION SIDE BY SIDE */
+.dual-section {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 30px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* GLASS BOX */
+.box {
+  flex: 1;
+  min-width: 300px;
+  max-width: 550px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 30px;
+  border: 1px solid rgba(255,255,255,0.1);
   transition: 0.3s;
 }
 
-.btn:hover {
-  transform: scale(1.05);
-}
-
-/* =========================
-   SECTIONS
-========================= */
-
-/* =========================
-   SERVICES + SOLUTIONS
-========================= */
-.dual-section {
-  display: flex;
-  gap: 20px;
-  padding: 40px 20px;
-  flex-wrap: wrap;
-}
-
-.box {
-  flex: 1;
-  background: rgba(255,255,255,0.05);
-  padding: 20px;
-  border-radius: 20px;
-  backdrop-filter: blur(10px);
+.box:hover {
+  transform: translateY(-5px);
+  border: 1px solid rgba(56,189,248,0.4);
 }
 
 /* GRID */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 15px;
+  margin-top: 20px;
 }
 
 /* CARDS */
 .card {
   padding: 20px;
   border-radius: 15px;
-  background: rgba(255,255,255,0.08);
-  transition: 0.3s;
+  background: rgba(255,255,255,0.06);
   text-align: center;
+  transition: 0.3s;
+  border: 1px solid transparent;
 }
 
 .card:hover {
   transform: translateY(-5px);
-  background: rgba(56,189,248,0.2);
+  border: 1px solid rgba(56,189,248,0.5);
 }
 
-/* CLICKABLE */
-
-/* =========================
-   CONTACT
-========================= */
-
-/* =========================
-   FOOTER
-========================= */
-footer {
-  text-align: center;
-  padding: 20px;
-  font-size: 14px;
-  opacity: 0.7;
-}
-
-/* =========================
-   SOCIAL BAR
-========================= */
+/* SOCIAL */
 .social-bar {
   position: fixed;
   right: 20px;
@@ -196,15 +136,21 @@ footer {
   align-items: center;
   border-radius: 50%;
   color: white;
-  transition: 0.3s;
 }
 
-.social-bar a:hover {
-  transform: scale(1.1);
-}
-
-/* COLORS */
 .whatsapp { background:#25D366; }
 .linkedin { background:#0A66C2; }
 .instagram { background:#E1306C; }
 .facebook { background:#1877F2; }
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .dual-section {
+    flex-direction: column;
+  }
+
+  .headline {
+    font-size: 32px;
+    white-space: normal;
+  }
+}
