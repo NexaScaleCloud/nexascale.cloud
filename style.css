@@ -204,6 +204,13 @@ canvas {
   cursor: pointer;
 }
 
+/* ADD THIS (important) */
+.clickable:visited,
+.clickable:active,
+.clickable:hover {
+  color: white;
+}
+
 
 
 
