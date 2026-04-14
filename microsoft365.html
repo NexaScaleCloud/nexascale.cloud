@@ -4,77 +4,77 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Microsoft 365 - NexaScale</title>
+
 <link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Orbitron:wght@500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 
 <body>
 
+<canvas id="network"></canvas>
+
+<!-- NAVBAR -->
 <header class="nav">
-  <a href="index.html" class="logo">NexaScale</a>
+    <a href="index.html" class="logo">NexaScale</a>
 </header>
 
-<section class="hero small">
-  <h1>Microsoft 365 Services</h1>
+<!-- HERO -->
+<section class="hero">
+  <h1 class="headline">
+    Microsoft 365 <span>Services</span>
+  </h1>
+
+  <p class="cloud-text">Productivity • Security • Collaboration</p>
 </section>
 
+<!-- SERVICES DETAILS -->
 <section class="dual-section">
+
   <div class="box">
-    <h2>Services</h2>
+    <h2>What We Offer</h2>
     <div class="grid">
-      <div class="card" onclick="showEmail()">Business Email Setup</div>
+<div class="card" onclick="showService('email')">
+  Business Email Setup
+</div>
       <div class="card">Teams Integration</div>
-      <div class="card">SharePoint</div>
-      <div class="card">OneDrive</div>
+      <div class="card">SharePoint Setup</div>
+      <div class="card">OneDrive Configuration</div>
     </div>
   </div>
-</section>
 
-<!-- GLASS DETAIL BOX -->
-<section id="email-box" class="detail-box">
-  <h2>Business Email Setup</h2>
-
-  <div class="detail-section">
-    <h3>Email Configuration</h3>
-    <ul>
-      <li>Custom domain email setup</li>
-      <li>Mailbox creation</li>
-      <li>DNS configuration</li>
-      <li>Secure login setup</li>
-    </ul>
-  </div>
-
-  <div class="detail-section">
-    <h3>Security Setup</h3>
-    <ul>
-      <li>Multi-factor authentication</li>
-      <li>Spam filtering</li>
-      <li>Threat protection</li>
-      <li>Data encryption</li>
-    </ul>
-  </div>
-
-  <div class="detail-section">
-    <h3>Device Access</h3>
-    <ul>
-      <li>Mobile configuration</li>
-      <li>Outlook setup</li>
-      <li>Cross-device sync</li>
-      <li>Remote access</li>
-    </ul>
-  </div>
-
-  <div class="detail-section">
-    <h3>Admin Control</h3>
-    <ul>
-      <li>User management</li>
-      <li>License assignment</li>
-      <li>Admin dashboard</li>
-      <li>Backup & recovery</li>
-    </ul>
+  <div class="box">
+    <h2>Advanced Services</h2>
+    <div class="grid">
+      <div class="card">Security & Compliance</div>
+      <div class="card">Migration Services</div>
+      <div class="card">User Management</div>
+      <div class="card">License Optimization</div>
+    </div>
   </div>
 
 </section>
+
+<!-- BACK BUTTON -->
+<div style="text-align:center; margin-top:30px;">
+    <a href="index.html" class="btn back-btn">
+  ← Back to Home
+</a>
+</div>
+
+<!-- SOCIAL -->
+<div class="social-bar">
+  <a href="https://wa.me/919876543210" target="_blank"><i class="fab fa-whatsapp"></i></a>
+  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+  <a href="#"><i class="fab fa-instagram"></i></a>
+  <a href="#"><i class="fab fa-facebook-f"></i></a>
+</div>
 
 <script src="script.js"></script>
+
 </body>
 </html>
+
