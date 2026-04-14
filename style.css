@@ -120,9 +120,6 @@ h1 {
 /* =========================
    SECTIONS
 ========================= */
-.section {
-  padding: 50px 20px;
-}
 
 /* =========================
    SERVICES + SOLUTIONS
@@ -164,19 +161,10 @@ h1 {
 }
 
 /* CLICKABLE */
-.clickable {
-  text-decoration: none;
-  color: white;
-  cursor: pointer;
-}
 
 /* =========================
    CONTACT
 ========================= */
-.contact-box {
-  text-align: center;
-  padding: 60px 20px;
-}
 
 /* =========================
    FOOTER
