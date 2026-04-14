@@ -64,20 +64,23 @@ canvas {
 /* SECTION */
 .dual-section {
   display: flex;
-  justify-content: center; /* keep centered */
+  justify-content: space-between;
   align-items: stretch;
 
   gap: 30px;
-
   padding: 20px;
 
-  max-width: 1500px; /* balanced width */
+  max-width: 1200px;
   margin: 20px auto;
+
+  flex-wrap: wrap; /* 🔥 allows perfect fitting */
 }
 
 .box {
-  width: 480px;   /* ✅ fixed width (boxy look) */
-  flex: none;     /* ❗ removes stretching */
+  flex: 1 1 450px; /* 🔥 magic line */
+
+  max-width: 550px; /* prevents over-stretch */
+  min-width: 320px;
 
   display: flex;
   flex-direction: column;
@@ -87,7 +90,7 @@ canvas {
   backdrop-filter: blur(20px);
 
   border-radius: 20px;
-  padding: 40px;
+  padding: 30px;
 
   border: 1px solid rgba(255,255,255,0.1);
   transition: 0.3s;
