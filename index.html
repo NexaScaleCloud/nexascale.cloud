@@ -8,66 +8,102 @@
 <style>
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to top, #0f172a, #1e3a8a);
+    font-family: 'Segoe UI', sans-serif;
+    background: radial-gradient(circle at top, #1e3a8a, #020617);
     color: white;
-    text-align: center;
     overflow-x: hidden;
 }
 
-/* Floating clouds */
-.cloud {
-    position: absolute;
-    background: rgba(255,255,255,0.1);
-    border-radius: 50%;
-    animation: float 60s linear infinite;
+/* Animated background glow */
+.bg-glow {
+    position: fixed;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(56,189,248,0.3), transparent);
+    top: -100px;
+    left: -100px;
+    filter: blur(120px);
+    animation: moveGlow 10s infinite alternate;
 }
 
-.cloud:nth-child(1) { width: 200px; height: 80px; top: 10%; left: -200px; }
-.cloud:nth-child(2) { width: 300px; height: 100px; top: 30%; left: -300px; animation-duration: 80s; }
-.cloud:nth-child(3) { width: 250px; height: 90px; top: 60%; left: -250px; animation-duration: 70s; }
-
-@keyframes float {
-    from { transform: translateX(0); }
-    to { transform: translateX(120vw); }
+@keyframes moveGlow {
+    from { transform: translate(0,0); }
+    to { transform: translate(200px,100px); }
 }
 
-/* Glow title */
-.glow {
-    font-size: 48px;
-    background: linear-gradient(90deg, #38bdf8, #60a5fa, #a78bfa);
-    background-size: 200%;
+/* Hero */
+header {
+    text-align: center;
+    padding: 120px 20px;
+}
+
+h1 {
+    font-size: 60px;
+    background: linear-gradient(90deg, #38bdf8, #818cf8);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: glowMove 5s linear infinite;
 }
 
-@keyframes glowMove {
-    0% { background-position: 0%; }
-    100% { background-position: 200%; }
+p {
+    color: #cbd5f5;
 }
 
-/* Header */
-header {
-    padding: 100px 20px;
-    animation: fadeIn 2s ease-in;
+/* Button */
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 30px;
+    border-radius: 30px;
+    background: linear-gradient(90deg, #38bdf8, #6366f1);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #38bdf8;
 }
 
-/* Sections */
+/* Section */
 .section {
-    padding: 50px 20px;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+/* Cards */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 25px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.card {
+    background: rgba(255,255,255,0.05);
+    border-radius: 15px;
+    padding: 30px;
+    backdrop-filter: blur(15px);
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-15px) scale(1.05);
+    box-shadow: 0 0 25px rgba(56,189,248,0.5);
+}
+
+/* Fade animation */
+.fade {
     opacity: 0;
     transform: translateY(30px);
-    animation: fadeUp 1s ease forwards;
+    animation: fadeUp 1s forwards;
 }
 
-.section:nth-of-type(2) { animation-delay: 0.5s; }
-.section:nth-of-type(3) { animation-delay: 1s; }
+.fade:nth-child(2) { animation-delay: 0.3s; }
+.fade:nth-child(3) { animation-delay: 0.6s; }
+.fade:nth-child(4) { animation-delay: 0.9s; }
 
 @keyframes fadeUp {
     to {
@@ -76,81 +112,49 @@ header {
     }
 }
 
-/* Cards */
-.services {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
-}
-
-.card {
-    background: rgba(255,255,255,0.08);
-    padding: 25px;
-    border-radius: 12px;
-    width: 260px;
-    backdrop-filter: blur(10px);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-10px) scale(1.05);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-}
-
-/* Button */
-.btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 25px;
-    background: #38bdf8;
-    color: black;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background: #0ea5e9;
-    transform: scale(1.1);
-}
-
 /* Footer */
 footer {
-    padding: 20px;
-    font-size: 14px;
-    color: #cbd5f5;
+    text-align: center;
+    padding: 30px;
+    color: #94a3b8;
 }
 </style>
 
 </head>
+
 <body>
 
-<!-- Clouds -->
-<div class="cloud"></div>
-<div class="cloud"></div>
-<div class="cloud"></div>
+<div class="bg-glow"></div>
 
 <header>
-    <h1 class="glow">☁️ NexaScale Cloud</h1>
-    <p>Modern Cloud Solutions for Azure, AWS & Google Cloud</p>
-    <a href="mailto:info@nexascale.cloud" class="btn">Contact Us</a>
+    <h1>☁️ NexaScale Cloud</h1>
+    <p>Advanced Cloud Solutions for Azure, AWS & Google Cloud</p>
+    <a href="mailto:info@nexascale.cloud" class="btn">Get Started</a>
 </header>
 
 <section class="section">
     <h2>Our Services</h2>
-    <div class="services">
-        <div class="card">Microsoft 365 Setup & Migration</div>
-        <div class="card">Azure Cloud Solutions</div>
-        <div class="card">AWS Consulting</div>
-        <div class="card">Google Cloud Services</div>
+    <div class="grid">
+        <div class="card fade">Microsoft 365 Setup & Migration</div>
+        <div class="card fade">Azure Architecture & Deployment</div>
+        <div class="card fade">AWS Cloud Consulting</div>
+        <div class="card fade">Google Cloud Solutions</div>
     </div>
 </section>
 
 <section class="section">
-    <h2>Why Choose Us</h2>
-    <p>We deliver scalable, secure, and cost-efficient cloud solutions tailored to your business needs.</p>
+    <h2>Solutions We Deliver</h2>
+    <div class="grid">
+        <div class="card fade">Cloud Migration</div>
+        <div class="card fade">Cost Optimization</div>
+        <div class="card fade">Security & Compliance</div>
+        <div class="card fade">DevOps & Automation</div>
+    </div>
+</section>
+
+<section class="section">
+    <h2>Why NexaScale?</h2>
+    <p>We help businesses scale faster with secure, reliable and cost-efficient cloud infrastructure.</p>
 </section>
 
 <footer>
