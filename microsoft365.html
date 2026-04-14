@@ -37,14 +37,18 @@
   <div class="box">
     <h2>What We Offer</h2>
     <div class="grid">
-<div class="card" onclick="showService('email')">
-  Business Email Setup
-</div>
-      <div class="card">Teams Integration</div>
-      <div class="card">SharePoint Setup</div>
-      <div class="card">OneDrive Configuration</div>
-    </div>
-  </div>
+<div class="card" onclick="showService('email')">Business Email Setup</div>
+<div class="card" onclick="showService('teams')">Teams Integration</div>
+<div class="card" onclick="showService('sharepoint')">SharePoint Setup</div>
+<div class="card" onclick="showService('onedrive')">OneDrive Configuration</div>
+
+        <!-- SERVICE DETAILS DISPLAY -->
+<section id="service-details" class="service-details">
+  <h2 id="service-title">Select a Service</h2>
+  <ul id="service-points"></ul>
+</section>
+
+  
 
   <div class="box">
     <h2>Advanced Services</h2>
