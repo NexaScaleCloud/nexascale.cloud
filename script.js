@@ -43,6 +43,12 @@ function toggleEmail() {
     box.style.display = "none";
   } else {
     box.style.display = "block";
-    box.scrollIntoView({ behavior: "smooth" });
+
+    setTimeout(() => {
+      box.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }, 100);
   }
 }
