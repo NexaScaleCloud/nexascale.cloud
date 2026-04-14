@@ -3,48 +3,63 @@ body {
   font-family: 'Inter', sans-serif;
   background: #020617;
   color: white;
-  overflow-x: hidden;
 }
 
-/* NETWORK BG */
-#network {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-
-/* NAVBAR */
+/* NAVBAR FIX */
 .navbar {
   position: fixed;
+  top: 0;
   width: 100%;
-  padding: 15px 40px;
+  padding: 15px 30px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  background: rgba(0,0,0,0.6);
   backdrop-filter: blur(10px);
   z-index: 1000;
 }
 
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
 .menu a {
   color: white;
-  margin-left: 20px;
   text-decoration: none;
 }
 
 /* HERO */
 .hero {
   text-align: center;
-  padding: 150px 20px;
+  padding: 120px 20px 60px;
 }
 
-.hero h1 {
-  font-size: 60px;
+/* HEADLINE FIX */
+.headline {
+  font-size: 48px;
+  white-space: nowrap;
 }
 
-.hero span {
+.headline span {
   background: linear-gradient(90deg,#38bdf8,#6366f1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: glow 4s infinite linear;
+}
+
+@keyframes glow {
+  0% { filter: brightness(1); }
+  50% { filter: brightness(1.5); }
+  100% { filter: brightness(1); }
+}
+
+/* CLOUD TEXT */
+.cloud-text {
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 2px;
+  margin-top: 15px;
+  color: #38bdf8;
 }
 
 /* BUTTON */
@@ -56,46 +71,60 @@ body {
   color: black;
 }
 
-/* SECTIONS */
+.btn.large {
+  padding: 15px 40px;
+}
+
+/* REMOVE EXTRA SPACE */
 .section {
-  padding: 80px 20px;
-  text-align: center;
+  padding: 60px 20px;
+}
+
+/* SIDE BY SIDE BOX */
+.dual-section {
+  display: flex;
+  gap: 30px;
+  padding: 40px;
+  flex-wrap: wrap;
+}
+
+.box {
+  flex: 1;
+  background: rgba(255,255,255,0.05);
+  padding: 25px;
+  border-radius: 20px;
 }
 
 /* GRID */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-  gap: 20px;
-  max-width: 1000px;
-  margin: auto;
+  grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+  gap: 15px;
 }
 
 /* CARDS */
 .card {
-  padding: 30px;
+  padding: 20px;
   border-radius: 15px;
-  background: rgba(255,255,255,0.05);
+  background: rgba(255,255,255,0.08);
   transition: 0.3s;
 }
 
 .card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-5px);
 }
 
-/* FORM */
-form {
-  max-width: 400px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
+/* CLICKABLE PRICING */
+.clickable {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
 }
 
-input, textarea {
-  margin: 10px 0;
-  padding: 12px;
-  border-radius: 10px;
-  border: none;
+/* CONTACT NEW STYLE */
+.contact-box {
+  text-align: center;
+  padding: 80px 20px;
 }
 
 /* SOCIAL */
@@ -112,8 +141,8 @@ input, textarea {
   width: 45px;
   height: 45px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   border-radius: 50%;
   color: white;
 }
