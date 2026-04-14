@@ -64,9 +64,15 @@ canvas {
 /* SECTION */
 .dual-section {
   display: flex;
-  gap: 20px;
+  justify-content: center;
+  align-items: stretch;
+
+  gap: 20px; /* reduced gap */
+
   padding: 20px;
-  flex-wrap: wrap;
+
+  max-width: 900px; /* 🔥 reduced from 1100px */
+  margin: 20px auto 0;
 }
 
 .box {
