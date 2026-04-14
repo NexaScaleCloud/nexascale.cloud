@@ -26,18 +26,16 @@ canvas {
   left: 0;
   width: 100%;
   height: 70px;
+
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  padding-left: 0 40px;
+  justify-content: flex-start; /* ✅ moves to LEFT */
+
+  padding-left: 40px; /* spacing from left */
+
   background: rgba(2, 6, 23, 0.7);
   backdrop-filter: blur(10px);
   z-index: 1000;
-}
-
-.logo {
-  font-size: 22px;
-  font-weight: 600;
 }
 
 /* HERO (NO EXTRA GAP) */
