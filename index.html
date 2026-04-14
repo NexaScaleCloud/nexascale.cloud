@@ -32,7 +32,22 @@ body {
     to { transform: translateX(120vw); }
 }
 
-/* Header animation */
+/* Glow title */
+.glow {
+    font-size: 48px;
+    background: linear-gradient(90deg, #38bdf8, #60a5fa, #a78bfa);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glowMove 5s linear infinite;
+}
+
+@keyframes glowMove {
+    0% { background-position: 0%; }
+    100% { background-position: 200%; }
+}
+
+/* Header */
 header {
     padding: 100px 20px;
     animation: fadeIn 2s ease-in;
@@ -43,12 +58,22 @@ header {
     to { opacity: 1; transform: translateY(0); }
 }
 
-h1 {
-    font-size: 48px;
-}
-
+/* Sections */
 .section {
     padding: 50px 20px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s ease forwards;
+}
+
+.section:nth-of-type(2) { animation-delay: 0.5s; }
+.section:nth-of-type(3) { animation-delay: 1s; }
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Cards */
@@ -108,8 +133,8 @@ footer {
 <div class="cloud"></div>
 
 <header>
-    <h1>☁️ NexaScale Cloud</h1>
-    <p>Scaling Your Cloud. Simplifying Your Growth.</p>
+    <h1 class="glow">☁️ NexaScale Cloud</h1>
+    <p>Modern Cloud Solutions for Azure, AWS & Google Cloud</p>
     <a href="mailto:info@nexascale.cloud" class="btn">Contact Us</a>
 </header>
 
