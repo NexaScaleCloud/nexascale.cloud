@@ -1,18 +1,25 @@
-/* RESET */
+/* =========================
+   RESET
+========================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* BODY */
+/* =========================
+   BODY
+========================= */
 body {
   font-family: 'Inter', sans-serif;
   background: #020617;
   color: white;
+  overflow-x: hidden;
 }
 
-/* FIX CANVAS (IMPORTANT) */
+/* =========================
+   BACKGROUND CANVAS
+========================= */
 #network {
   position: fixed;
   top: 0;
@@ -22,7 +29,9 @@ body {
   z-index: -1;
 }
 
-/* NAVBAR */
+/* =========================
+   NAVBAR
+========================= */
 .nav {
   position: fixed;
   top: 0;
@@ -32,7 +41,9 @@ body {
 
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end; /* RIGHT SIDE */
+
+  padding-right: 40px;
 
   background: rgba(2, 6, 23, 0.7);
   backdrop-filter: blur(10px);
@@ -47,14 +58,16 @@ body {
   letter-spacing: 1px;
 }
 
-/* HERO (MAIN FIX HERE) */
+/* =========================
+   HERO SECTION
+========================= */
 .hero {
-  margin-top: 70px; /* equal to navbar */
+  margin-top: 70px; /* exact navbar height */
   padding: 20px 20px 40px;
   text-align: center;
 }
 
-/* 🔥 REMOVE DEFAULT H1 GAP */
+/* REMOVE DEFAULT H1 SPACE */
 h1 {
   margin: 0;
 }
@@ -65,13 +78,15 @@ h1 {
   white-space: nowrap;
 }
 
+/* GRADIENT TEXT */
 .headline span {
-  background: linear-gradient(90deg,#38bdf8,#6366f1);
+  background: linear-gradient(90deg, #38bdf8, #6366f1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: glow 4s infinite linear;
 }
 
+/* ANIMATION */
 @keyframes glow {
   0% { filter: brightness(1); }
   50% { filter: brightness(1.5); }
@@ -95,14 +110,23 @@ h1 {
   border-radius: 25px;
   text-decoration: none;
   color: black;
+  transition: 0.3s;
 }
 
-/* SECTIONS */
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* =========================
+   SECTIONS
+========================= */
 .section {
   padding: 50px 20px;
 }
 
-/* SIDE BY SIDE */
+/* =========================
+   SERVICES + SOLUTIONS
+========================= */
 .dual-section {
   display: flex;
   gap: 20px;
@@ -115,12 +139,13 @@ h1 {
   background: rgba(255,255,255,0.05);
   padding: 20px;
   border-radius: 20px;
+  backdrop-filter: blur(10px);
 }
 
 /* GRID */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 15px;
 }
 
@@ -130,19 +155,42 @@ h1 {
   border-radius: 15px;
   background: rgba(255,255,255,0.08);
   transition: 0.3s;
+  text-align: center;
 }
 
 .card:hover {
   transform: translateY(-5px);
+  background: rgba(56,189,248,0.2);
 }
 
-/* CONTACT */
+/* CLICKABLE */
+.clickable {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* =========================
+   CONTACT
+========================= */
 .contact-box {
   text-align: center;
   padding: 60px 20px;
 }
 
-/* SOCIAL */
+/* =========================
+   FOOTER
+========================= */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* =========================
+   SOCIAL BAR
+========================= */
 .social-bar {
   position: fixed;
   right: 20px;
@@ -160,8 +208,14 @@ h1 {
   align-items: center;
   border-radius: 50%;
   color: white;
+  transition: 0.3s;
 }
 
+.social-bar a:hover {
+  transform: scale(1.1);
+}
+
+/* COLORS */
 .whatsapp { background:#25D366; }
 .linkedin { background:#0A66C2; }
 .instagram { background:#E1306C; }
