@@ -51,37 +51,91 @@ document.querySelectorAll(".box, .card, .back-btn").forEach(el => {
 function showService(service) {
   const container = document.getElementById("service-details");
 
-  let data = {
-    email: [
-      {
-        title: "Business Email Setup",
-        points: [
-          "Custom domain email setup",
-          "Microsoft 365 account configuration",
-          "Secure email access across devices",
-          "Spam protection & security setup"
-        ]
-      },
-      {
-        title: "User Management",
-        points: [
-          "Create & manage users",
-          "Assign licenses",
-          "Password policy setup",
-          "Access control management"
-        ]
-      },
-      {
-        title: "Security & Protection",
-        points: [
-          "Multi-factor authentication",
-          "Anti-spam protection",
-          "Data security policies",
-          "Admin control setup"
-        ]
-      }
-    ]
+  const data = {
+    email: {
+      title: "Business Email Setup",
+      points: [
+        "Custom domain email setup",
+        "Microsoft 365 account configuration",
+        "Secure email access across devices",
+        "Spam protection & security setup"
+      ]
+    },
+    teams: {
+      title: "Teams Integration",
+      points: [
+        "Microsoft Teams setup",
+        "Channel & team structuring",
+        "Meeting & collaboration tools",
+        "Integration with apps"
+      ]
+    },
+    sharepoint: {
+      title: "SharePoint Setup",
+      points: [
+        "Document management system",
+        "Team collaboration portals",
+        "Access control setup",
+        "Workflow automation"
+      ]
+    },
+    onedrive: {
+      title: "OneDrive Configuration",
+      points: [
+        "Cloud file storage setup",
+        "Auto backup configuration",
+        "Secure file sharing",
+        "Sync across devices"
+      ]
+    }
   };
+
+  const selected = data[service];
+
+  // CLEAR OLD CONTENT
+  container.innerHTML = "";
+
+  // CREATE BOX
+  const box = document.createElement("div");
+  box.className = "box";
+
+  const title = document.createElement("h2");
+  title.innerText = selected.title;
+
+  const list = document.createElement("ul");
+
+  selected.points.forEach(point => {
+    const li = document.createElement("li");
+    li.innerText = point;
+    list.appendChild(li);
+  });
+
+  // BACK BUTTON
+  const backBtn = document.createElement("div");
+  backBtn.className = "back-btn";
+  backBtn.innerText = "Back";
+  backBtn.onclick = () => {
+    container.innerHTML = "";
+  };
+
+  // APPEND
+  box.appendChild(title);
+  box.appendChild(list);
+  box.appendChild(backBtn);
+  container.appendChild(box);
+
+  // SCROLL
+  setTimeout(() => {
+    container.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+  }, 100);
+}
+
+
+
+
 
   container.innerHTML = "";
 
