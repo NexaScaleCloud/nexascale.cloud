@@ -1,62 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NexaScale</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Microsoft 365 - NexaScale</title>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 
-  <!-- GOOGLE FONT -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Orbitron:wght@500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 
 <body>
 
-<!-- BACKGROUND ANIMATION -->
 <canvas id="network"></canvas>
 
 <!-- NAVBAR -->
 <header class="nav">
-  <a href="index.html" class="logo">NexaScale</a>
+    <a href="index.html" class="logo">NexaScale</a>
 </header>
 
-<!-- HERO SECTION -->
+<!-- HERO -->
 <section class="hero">
   <h1 class="headline">
-    Build the Future on <span>Cloud Infrastructure</span>
+    Microsoft 365 <span>Services</span>
   </h1>
+
+  <p class="cloud-text">Productivity • Security • Collaboration</p>
 </section>
 
-<!-- SERVICES SECTION -->
+<!-- SERVICES DETAILS -->
 <section class="dual-section">
 
-  <!-- CLOUD SERVICES -->
   <div class="box">
-    <h2>Cloud Services</h2>
+    <h2>What We Offer</h2>
     <div class="grid">
-      <a href="microsoft365.html" class="card clickable">Microsoft 365</a>
-      <div class="card">Azure</div>
-      <div class="card">AWS</div>
-      <div class="card">Google Cloud</div>
+<div class="card" onclick="showService('email')">
+  Business Email Setup
+</div>
+      <div class="card">Teams Integration</div>
+      <div class="card">SharePoint Setup</div>
+      <div class="card">OneDrive Configuration</div>
     </div>
   </div>
 
-  <!-- SOLUTIONS -->
   <div class="box">
-    <h2>Solutions</h2>
+    <h2>Advanced Services</h2>
     <div class="grid">
-      <div class="card">Migration</div>
-      <div class="card">Security</div>
-      <div class="card">Optimization</div>
-      <div class="card">Automation</div>
+      <div class="card">Security & Compliance</div>
+      <div class="card">Migration Services</div>
+      <div class="card">User Management</div>
+      <div class="card">License Optimization</div>
     </div>
   </div>
 
 </section>
 
-<!-- SCRIPT -->
+<!-- BACK BUTTON -->
+<div style="text-align:center; margin-top:30px;">
+    <a href="index.html" class="btn back-btn">
+  ← Back to Home
+</a>
+</div>
+
+<!-- SOCIAL -->
+<div class="social-bar">
+  <a href="https://wa.me/919876543210" target="_blank"><i class="fab fa-whatsapp"></i></a>
+  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+  <a href="#"><i class="fab fa-instagram"></i></a>
+  <a href="#"><i class="fab fa-facebook-f"></i></a>
+</div>
+
 <script src="script.js"></script>
 
 </body>
