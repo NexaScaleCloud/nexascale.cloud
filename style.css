@@ -198,4 +198,12 @@ canvas {
   }
 }
 
+.clickable {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+
+
 
