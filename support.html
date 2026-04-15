@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Support Services</title>
+<meta charset="UTF-8">
+<title>Support Services</title>
 
-  <!-- MAIN CSS -->
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/m365.css">
-  <!-- GOOGLE FONT -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<!-- CSS -->
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/m365.css">
 
-  <!-- FONT AWESOME -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<!-- ICONS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 
 <body>
@@ -21,10 +23,8 @@
   <div class="logo" onclick="location.href='index.html'">
     NexaScale
   </div>
-
   <nav class="menu">
     <a href="index.html">Home</a>
-    <a href="microsoft365.html">Microsoft 365</a>
     <a href="#">Plans</a>
     <a href="#">Contact</a>
   </nav>
@@ -36,34 +36,34 @@
 <!-- MAIN CONTAINER -->
 <div class="m365-container">
 
-  <!-- PAGE HEADER -->
+  <!-- HEADER -->
   <div class="page-header">
     <h1 class="page-title">Support Services</h1>
-    <p class="page-subtitle">Reliable IT Support & Managed Services for Your Business</p>
+    <p class="page-subtitle">Reliable IT Support for Your Business</p>
   </div>
 
-  <!-- SERVICE CARDS -->
+  <!-- CARDS -->
   <div class="m365-grid">
-
-    <div class="m365-card" onclick="showSupportService(event, 'helpdesk')">
-      Helpdesk Support
+    
+    <div class="m365-card" onclick="showSupport(event,'managed')">
+      Managed IT Support
     </div>
 
-    <div class="m365-card" onclick="showSupportService(event, 'monitoring')">
+    <div class="m365-card" onclick="showSupport(event,'helpdesk')">
+      Helpdesk Services
+    </div>
+
+    <div class="m365-card" onclick="showSupport(event,'monitoring')">
       Monitoring & Maintenance
     </div>
 
-    <div class="m365-card" onclick="showSupportService(event, 'managed')">
-      Managed IT Services
-    </div>
-
-    <div class="m365-card" onclick="showSupportService(event, 'consulting')">
-      IT Consulting & Advisory
+    <div class="m365-card" onclick="showSupport(event,'consulting')">
+      IT Consulting
     </div>
 
   </div>
 
-  <!-- DYNAMIC CONTENT -->
+  <!-- DETAILS -->
   <div id="support-details" class="m365-details"></div>
 
   <!-- BACK BUTTON -->
@@ -77,26 +77,16 @@
 
 <!-- SOCIAL ICONS -->
 <div class="socials">
-  <a href="https://wa.me/919028575595?text=Hello%20NexaScale%2C%20I%20want%20more%20information" target="_blank">
+  <a href="https://wa.me/919028575595" target="_blank">
     <i class="fab fa-whatsapp"></i>
   </a>
-
-  <a href="#">
-    <i class="fab fa-linkedin"></i>
-  </a>
-
-  <a href="#">
-    <i class="fab fa-instagram"></i>
-  </a>
-
-  <a href="#">
-    <i class="fab fa-facebook"></i>
-  </a>
+  <a href="#"><i class="fab fa-linkedin"></i></a>
+  <a href="#"><i class="fab fa-instagram"></i></a>
+  <a href="#"><i class="fab fa-facebook"></i></a>
 </div>
 
-<!-- JS FILE -->
+<!-- JS -->
 <script src="js/main.js"></script>
-<script src="js/support.js"></script>
 
 </body>
 </html>
