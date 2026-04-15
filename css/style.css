@@ -13,6 +13,58 @@ body {
   overflow-x: hidden;
 }
 
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+/* LOGO */
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  cursor: pointer;
+
+  background: linear-gradient(90deg, #38bdf8, #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* MENU */
+.menu a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  position: relative;
+}
+
+/* HOVER EFFECT */
+.menu a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background: #38bdf8;
+  transition: 0.3s;
+}
+
+.menu a:hover::after {
+  width: 100%;
+}
+
+
 /* BACKGROUND CANVAS */
 #network {
   position: fixed;
