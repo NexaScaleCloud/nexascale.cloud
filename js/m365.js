@@ -255,10 +255,93 @@ teams: [
   }
 ],
 
-    onedrive: [
-      { title: "Storage", points: ["Cloud save", "Backup"] },
-      { title: "Sync", points: ["Multi-device", "Real-time"] }
+onedrive: [
+  {
+    title: "Personal Cloud Storage Provisioning",
+    points: [
+      "We set up secure personal cloud storage for each user to store and manage their work files efficiently."
     ]
+  },
+  {
+    title: "Secure File Access & Sharing",
+    points: [
+      "We configure controlled sharing options to enable secure collaboration both internally and externally."
+    ]
+  },
+  {
+    title: "OneDrive Sync Configuration",
+    points: [
+      "We enable seamless synchronization between cloud and local devices for easy file access."
+    ]
+  },
+  {
+    title: "Cross-Device Accessibility",
+    points: [
+      "We ensure your files are accessible across desktop, web, and mobile devices for flexible working."
+    ]
+  },
+  {
+    title: "File Versioning & Recovery",
+    points: [
+      "We activate version history and recovery options to restore files in case of accidental changes or deletion."
+    ]
+  },
+  {
+    title: "Offline Access Enablement",
+    points: [
+      "We configure offline access so users can work without internet and sync changes later."
+    ]
+  },
+  {
+    title: "Security & Access Controls",
+    points: [
+      "We implement advanced security policies to protect data and prevent unauthorized access."
+    ]
+  },
+  {
+    title: "Data Loss Prevention (DLP)",
+    points: [
+      "We apply policies to prevent accidental sharing of sensitive business information."
+    ]
+  },
+  {
+    title: "External Collaboration Controls",
+    points: [
+      "We define secure sharing rules with expiry links and permission-based access."
+    ]
+  },
+  {
+    title: "Storage Management & Optimization",
+    points: [
+      "We monitor and optimize storage usage to ensure efficient data management."
+    ]
+  },
+  {
+    title: "Backup & Ransomware Protection",
+    points: [
+      "We configure built-in protection to safeguard data from deletion and ransomware threats."
+    ]
+  },
+  {
+    title: "Microsoft 365 App Integration",
+    points: [
+      "We integrate OneDrive with Office apps for real-time collaboration and auto-saving."
+    ]
+  },
+  {
+    title: "Admin Monitoring & Reporting",
+    points: [
+      "We provide admin insights to track usage, sharing activity, and potential risks."
+    ]
+  },
+  {
+    title: "Lifecycle & Cleanup Policies",
+    points: [
+      "We implement cleanup and lifecycle policies to maintain an organized storage environment."
+    ]
+  }
+],
+
   };
 
   const container = document.getElementById("service-details");
