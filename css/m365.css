@@ -39,3 +39,43 @@
   color: #38bdf8;
   margin-bottom: 10px;
 }
+
+/* PAGE TITLE (M365) */
+.page-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 5px;
+
+  background: linear-gradient(90deg, #38bdf8, #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* SUBTITLE */
+.page-subtitle {
+  font-size: 14px;
+  opacity: 0.7;
+  margin-bottom: 20px;
+}
+
+/* BACK BUTTON */
+.back-btn {
+  margin: 15px 0 30px;
+  padding: 10px 18px;
+
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.2);
+
+  background: rgba(255,255,255,0.08);
+  color: white;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  transform: translateY(-3px);
+  background: rgba(56,189,248,0.5);
+  box-shadow: 0 0 15px rgba(56,189,248,0.6);
+}
+
