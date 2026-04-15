@@ -1,120 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Microsoft 365</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Microsoft 365</title>
 
-<link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/m365.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
-  <!-- SOCIAL MEDIA BAR -->
-<div class="social-bar">
-  <a href="https://wa.me/919028575595?text=Hello%20NexaScale,%20I%20would%20like%20to%20know%20more%20about%20your%20cloud%20services." 
-   target="_blank" 
-   class="whatsapp">
-  <i class="fab fa-whatsapp"></i>
-</a>
-
-  <a href="#" class="linkedin">
-    <i class="fab fa-linkedin-in"></i>
-  </a>
-  <a href="#" class="instagram">
-    <i class="fab fa-instagram"></i>
-  </a>
-  <a href="#" class="facebook">
-    <i class="fab fa-facebook-f"></i>
-  </a>
-</div>
-
-  
 <body>
 
 <canvas id="network"></canvas>
 
-<header class="nav">
-  <a href="index.html" class="logo">NexaScale</a>
-</header>
+<section>
+  <h1>Microsoft 365 Services</h1>
 
-<section class="hero small">
+  <!-- SERVICES -->
+  <div class="m365-grid">
+    <div class="m365-card" onclick="showService(event, 'email')">Business Email Setup</div>
+    <div class="m365-card" onclick="showService(event, 'teams')">Teams Integration</div>
+    <div class="m365-card" onclick="showService(event, 'sharepoint')">SharePoint</div>
+    <div class="m365-card" onclick="showService(event, 'onedrive')">OneDrive</div>
+  </div>
 
-  <h1 class="headline">
-   <span>Microsoft 365</span> Services
-</h1>
+  <!-- DETAILS -->
+  <div id="service-details" class="m365-details"></div>
 
 </section>
 
-<section class="dual-section">
-  <div class="box">
-    <h2>Services</h2>
-    <div class="grid">
-     <div class="card" onclick="showService('email')">Business Email Setup</div>
-<div class="card" onclick="showService('teams')">Teams Integration</div>
-<div class="card" onclick="showService('sharepoint')">SharePoint</div>
-<div class="card" onclick="showService('onedrive')">OneDrive</div>
-    </div>
-  </div>
- 
-</section>
+<script src="js/main.js"></script>
+<script src="js/m365.js"></script>
 
-       <div id="service-details" class="service-container"></div>
-
-<!-- GLASS BOX BELOW -->
-<section id="email-box" class="detail-box">
-
-  <h2>Business Email Setup</h2>
-
-  <div class="detail-section">
-    <h3>Email Configuration</h3>
-    <ul>
-      <li>Custom domain email setup</li>
-      <li>Mailbox creation</li>
-      <li>DNS configuration</li>
-      <li>Secure login setup</li>
-    </ul>
-  </div>
-
-  <div class="detail-section">
-    <h3>Security Setup</h3>
-    <ul>
-      <li>Multi-factor authentication</li>
-      <li>Spam filtering</li>
-      <li>Threat protection</li>
-      <li>Data encryption</li>
-    </ul>
-  </div>
-
-  <div class="detail-section">
-    <h3>Device Access</h3>
-    <ul>
-      <li>Mobile configuration</li>
-      <li>Outlook setup</li>
-      <li>Cross-device sync</li>
-      <li>Remote access</li>
-    </ul>
-  </div>
-
-  <div class="detail-section">
-    <h3>Admin Control</h3>
-    <ul>
-      <li>User management</li>
-      <li>License assignment</li>
-      <li>Admin dashboard</li>
-      <li>Backup & recovery</li>
-    </ul>
-  </div>
-
-</section>
-  
-<!-- BACK BUTTON (BOTTOM) -->
-<div class="back-container">
-  <a href="index.html" class="back-btn">← Back to Home</a>
-</div>
-  
-<script src="script.js"></script>
 </body>
 </html>
-
-
