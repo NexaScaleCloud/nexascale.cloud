@@ -166,12 +166,6 @@ teams: [
     points: [
       "Implement expiry policies to archive inactive teams and manage long-term data lifecycle."
     ]
-  },
-  {
-    title: "Training & Adoption Rollout",
-    points: [
-      "Provide internal training, best practices, and onboarding to ensure full platform adoption."
-    ]
   }
 ],
     sharepoint: [
