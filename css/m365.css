@@ -1,0 +1,41 @@
+.m365-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.m365-card {
+  padding: 30px;
+  text-align: center;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.m365-card:hover {
+  transform: translateY(-5px);
+}
+
+.m365-card.active {
+  background: linear-gradient(135deg, #38bdf8, #6366f1);
+  color: white;
+  box-shadow: 0 0 25px rgba(56,189,248,0.6);
+}
+
+/* DETAILS GRID */
+.m365-details {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.m365-details .box h3 {
+  color: #38bdf8;
+  margin-bottom: 10px;
+}
