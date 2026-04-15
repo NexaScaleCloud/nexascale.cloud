@@ -1,73 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NexaScale</title>
+  <meta charset="UTF-8">
+  <title>Cloud Services</title>
 
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- GLOBAL CSS -->
+  <link rel="stylesheet" href="css/style.css">
 
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
-  <!-- SOCIAL MEDIA BAR -->
-<div class="social-bar">
-  <a href="https://wa.me/919028575595?text=Hello%20NexaScale,%20I%20would%20like%20to%20know%20more%20about%20your%20cloud%20services." 
-   target="_blank" 
-   class="whatsapp">
-  <i class="fab fa-whatsapp"></i>
-</a>
-
-  <a href="#" class="linkedin">
-    <i class="fab fa-linkedin-in"></i>
-  </a>
-  <a href="#" class="instagram">
-    <i class="fab fa-instagram"></i>
-  </a>
-  <a href="#" class="facebook">
-    <i class="fab fa-facebook-f"></i>
-  </a>
-</div>
-  
 <body>
 
+<!-- BACKGROUND ANIMATION -->
 <canvas id="network"></canvas>
 
-<header class="nav">
-  <a href="index.html" class="logo">NexaScale</a>
-</header>
+<!-- HERO SECTION -->
+<section>
+  <div class="box">
+    <h1 style="
+      background: linear-gradient(90deg, #38bdf8, #6366f1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    ">
+      Cloud Infrastructure
+    </h1>
 
-<section class="hero">
-  <h1 class="headline">
-    Build the Future on <span>Cloud Infrastructure</span>
-  </h1>
+    <p style="margin-top:10px; opacity:0.8;">
+      Secure, scalable and modern IT solutions for your business
+    </p>
+  </div>
 </section>
 
-<section class="dual-section">
-
+<!-- SERVICES SECTION -->
+<section>
   <div class="box">
-    <h2>Cloud Services</h2>
+    <h2>Our Services</h2>
+
     <div class="grid">
-      <a href="microsoft365.html" class="card clickable">Microsoft 365</a>
-      <div class="card">Azure</div>
-      <div class="card">AWS</div>
-      <div class="card">Google Cloud</div>
+
+      <!-- MICROSOFT 365 -->
+      <div class="card" onclick="location.href='microsoft365.html'">
+        Microsoft 365 Services
+      </div>
+
+      <!-- OTHER SERVICES -->
+      <div class="card">
+        Cloud Infrastructure
+      </div>
+
+      <div class="card">
+        Security Solutions
+      </div>
+
+      <div class="card">
+        Support Services
+      </div>
+
     </div>
   </div>
-
-  <div class="box">
-    <h2>Solutions</h2>
-    <div class="grid">
-      <div class="card">Migration</div>
-      <div class="card">Security</div>
-      <div class="card">Optimization</div>
-      <div class="card">Automation</div>
-    </div>
-  </div>
-
 </section>
 
-<script src="script.js"></script>
+<!-- SOCIAL MEDIA -->
+<div class="socials">
+  <a href="https://wa.me/91XXXXXXXXXX?text=Hello%20I%20am%20interested%20in%20your%20services" target="_blank">
+    WhatsApp
+  </a>
+
+  <a href="#" target="_blank">
+    LinkedIn
+  </a>
+</div>
+
+<!-- JS -->
+<script src="js/main.js"></script>
+
 </body>
 </html>
