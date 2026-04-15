@@ -41,26 +41,30 @@
 <!-- SERVICES -->
 <section class="services">
   <h2 class="section-title">Our Services</h2>
+<div class="home-grid">
 
-  <div class="grid">
-
-    <div class="card" onclick="location.href='microsoft365.html'">
-      Microsoft 365 Services
-    </div>
-
-    <div class="card">
-      Cloud Infrastructure
-    </div>
-
-    <div class="card">
-      Security Solutions
-    </div>
-
-    <div class="card">
-      Support Services
-    </div>
-
+  <div class="home-card" onclick="location.href='microsoft365.html'">
+    Microsoft 365 Services
   </div>
+
+  <div class="home-card" onclick="showHomeService(event, 'cloud')">
+    Cloud Infrastructure
+  </div>
+
+  <div class="home-card" onclick="showHomeService(event, 'security')">
+    Security Solutions
+  </div>
+
+  <div class="home-card" onclick="showHomeService(event, 'support')">
+    Support Services
+  </div>
+
+</div>
+
+<!-- DETAILS WILL SHOW HERE -->
+<div id="home-details" class="m365-details"></div>
+
+  
 </section>
 
 <!-- SOCIAL -->
