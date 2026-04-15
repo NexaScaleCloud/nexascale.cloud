@@ -249,3 +249,43 @@ body {
     0 0 40px rgba(99,102,241,0.5);
   transform: scale(1.02);
 }
+
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+
+  .navbar {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .m365-container {
+    padding: 15px;
+  }
+
+  .m365-card {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .m365-details {
+    padding: 15px;
+  }
+
+  .page-title {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .socials {
+    right: 10px;
+    bottom: 10px;
+  }
+
+}
