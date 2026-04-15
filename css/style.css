@@ -1,1 +1,54 @@
+/* RESET */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #0f172a;
+  color: #fff;
+}
 
+/* BACKGROUND CANVAS */
+#network {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* SECTION */
+section {
+  padding: 60px 10%;
+}
+
+/* HEADINGS */
+h1, h2, h3 {
+  margin: 0;
+}
+
+/* GLASS BOX (GLOBAL USE) */
+.box {
+  background: rgba(255,255,255,0.05);
+  border-radius: 15px;
+  padding: 25px;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* CURSOR GLOW EFFECT */
+.box, .card {
+  position: relative;
+  overflow: hidden;
+}
+
+.box::before, .card::before {
+  content: "";
+  position: absolute;
+  top: var(--y);
+  left: var(--x);
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(56,189,248,0.25), transparent);
+  pointer-events: none;
+}
