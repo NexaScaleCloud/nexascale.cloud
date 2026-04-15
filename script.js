@@ -39,83 +39,195 @@ animate();
 function showService(service) {
   const container = document.getElementById("service-details");
 
+  // REMOVE ACTIVE FROM ALL
+  document.querySelectorAll(".card").forEach(c => {
+    c.classList.remove("active");
+  });
+
+  // ADD ACTIVE TO CLICKED
+  event.currentTarget.classList.add("active");
+
   const data = {
-    email: {
-      title: "Business Email Setup",
-      points: [
-        "Custom domain email setup",
-        "Microsoft 365 account configuration",
-        "Secure email access across devices",
-        "Spam protection & security setup"
-      ]
-    },
-    teams: {
-      title: "Teams Integration",
-      points: [
-        "Microsoft Teams setup",
-        "Channel & team structuring",
-        "Meeting & collaboration tools",
-        "Integration with apps"
-      ]
-    },
-    sharepoint: {
-      title: "SharePoint Setup",
-      points: [
-        "Document management system",
-        "Team collaboration portals",
-        "Access control setup",
-        "Workflow automation"
-      ]
-    },
-    onedrive: {
-      title: "OneDrive Configuration",
-      points: [
-        "Cloud file storage setup",
-        "Auto backup configuration",
-        "Secure file sharing",
-        "Sync across devices"
-      ]
-    }
+    email: [
+      {
+        title: "Custom Domain Email",
+        points: [
+          "Professional business email",
+          "Domain-based identity",
+          "Easy management",
+          "Scalable setup"
+        ]
+      },
+      {
+        title: "Microsoft 365 Setup",
+        points: [
+          "Account creation",
+          "License configuration",
+          "Admin setup",
+          "User management"
+        ]
+      },
+      {
+        title: "Secure Access",
+        points: [
+          "Multi-device login",
+          "Encryption enabled",
+          "Secure protocols",
+          "Access control"
+        ]
+      },
+      {
+        title: "Spam Protection",
+        points: [
+          "Anti-spam filters",
+          "Threat detection",
+          "Email security",
+          "Safe inbox"
+        ]
+      }
+    ],
+
+    teams: [
+      {
+        title: "Teams Setup",
+        points: [
+          "Account configuration",
+          "User onboarding",
+          "Access setup",
+          "Permissions"
+        ]
+      },
+      {
+        title: "Channels",
+        points: [
+          "Structured teams",
+          "Department channels",
+          "Private groups",
+          "Better communication"
+        ]
+      },
+      {
+        title: "Meetings",
+        points: [
+          "Video calls",
+          "Screen sharing",
+          "Recording",
+          "Scheduling"
+        ]
+      },
+      {
+        title: "Integrations",
+        points: [
+          "Apps connection",
+          "Workflow tools",
+          "Automation",
+          "Collaboration"
+        ]
+      }
+    ],
+
+    sharepoint: [
+      {
+        title: "Document Management",
+        points: [
+          "Central storage",
+          "File organization",
+          "Version control",
+          "Access tracking"
+        ]
+      },
+      {
+        title: "Team Sites",
+        points: [
+          "Collaboration hubs",
+          "Shared workspace",
+          "Internal portals",
+          "Easy navigation"
+        ]
+      },
+      {
+        title: "Permissions",
+        points: [
+          "Role-based access",
+          "Security control",
+          "User restrictions",
+          "Safe sharing"
+        ]
+      },
+      {
+        title: "Automation",
+        points: [
+          "Workflow creation",
+          "Task automation",
+          "Approval flows",
+          "Efficiency boost"
+        ]
+      }
+    ],
+
+    onedrive: [
+      {
+        title: "Cloud Storage",
+        points: [
+          "Secure storage",
+          "Anywhere access",
+          "Scalable space",
+          "Fast upload"
+        ]
+      },
+      {
+        title: "Backup",
+        points: [
+          "Auto backup",
+          "File recovery",
+          "Version restore",
+          "Safe data"
+        ]
+      },
+      {
+        title: "Sharing",
+        points: [
+          "Easy sharing",
+          "Link access",
+          "Permissions",
+          "Secure transfer"
+        ]
+      },
+      {
+        title: "Sync",
+        points: [
+          "Device sync",
+          "Real-time updates",
+          "Offline access",
+          "Seamless usage"
+        ]
+      }
+    ]
   };
 
   const selected = data[service];
 
-  if (!selected) return;
-
   container.innerHTML = "";
 
-  const box = document.createElement("div");
-  box.className = "box";
+  selected.forEach(item => {
+    const box = document.createElement("div");
+    box.className = "box";
 
-  const title = document.createElement("h2");
-  title.innerText = selected.title;
+    const title = document.createElement("h3");
+    title.innerText = item.title;
 
-  const list = document.createElement("ul");
+    const list = document.createElement("ul");
 
-  selected.points.forEach(point => {
-    const li = document.createElement("li");
-    li.innerText = point;
-    list.appendChild(li);
-  });
-
-  const backBtn = document.createElement("div");
-  backBtn.className = "back-btn";
-  backBtn.innerText = "Back";
-  backBtn.onclick = () => {
-    container.innerHTML = "";
-  };
-
-  box.appendChild(title);
-  box.appendChild(list);
-  box.appendChild(backBtn);
-
-  container.appendChild(box);
-
-  setTimeout(() => {
-    container.scrollIntoView({
-      behavior: "smooth"
+    item.points.forEach(p => {
+      const li = document.createElement("li");
+      li.innerText = p;
+      list.appendChild(li);
     });
-  }, 100);
+
+    box.appendChild(title);
+    box.appendChild(list);
+    container.appendChild(box);
+  });
 }
 
 
