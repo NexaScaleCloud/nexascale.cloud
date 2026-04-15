@@ -1,1 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Security Solutions</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo" onclick="location.href='index.html'">
+    NexaScale
+  </div>
+  <nav class="menu">
+    <a href="index.html">Home</a>
+    <a href="microsoft365.html">Microsoft 365</a>
+    <a href="#">Plans</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+<canvas id="network"></canvas>
+
+<!-- MAIN CONTAINER -->
+<div class="m365-container">
+
+  <!-- HEADER -->
+  <div class="page-header">
+    <h1 class="page-title">Security Solutions</h1>
+    <p class="page-subtitle">Protect, Monitor & Secure Your Business Environment</p>
+  </div>
+
+  <!-- CARDS -->
+  <div class="m365-grid">
+
+    <div class="m365-card" onclick="showSecurityService(event, 'identity')">
+      Identity & Access Management
+    </div>
+
+    <div class="m365-card" onclick="showSecurityService(event, 'endpoint')">
+      Endpoint Security
+    </div>
+
+    <div class="m365-card" onclick="showSecurityService(event, 'network')">
+      Network Security
+    </div>
+
+    <div class="m365-card" onclick="showSecurityService(event, 'compliance')">
+      Compliance & Data Protection
+    </div>
+
+  </div>
+
+  <!-- DETAILS -->
+  <div id="security-details" class="m365-details"></div>
+
+  <!-- BACK BUTTON -->
+  <div class="back-container">
+    <button class="back-btn" onclick="location.href='index.html'">← Back to Home</button>
+  </div>
+
+</div>
+
+<!-- SOCIAL -->
+<div class="socials">
+  <a href="https://wa.me/919028575595?text=Hello%20NexaScale%2C%20I%20want%20more%20information" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  <a href="#"><i class="fab fa-linkedin"></i></a>
+  <a href="#"><i class="fab fa-instagram"></i></a>
+  <a href="#"><i class="fab fa-facebook"></i></a>
+</div>
+
+<script src="js/security.js"></script>
+
+</body>
+</html>
 
