@@ -1,9 +1,16 @@
-/* RESET of this */
-body {
+/* RESET */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
   font-family: 'Poppins', sans-serif;
   background: #0f172a;
   color: #fff;
+  overflow-x: hidden;
 }
 
 /* BACKGROUND CANVAS */
@@ -16,32 +23,69 @@ body {
   z-index: -1;
 }
 
-/* SECTION */
-section {
-  padding: 60px 10%;
+/* HERO SECTION */
+.hero {
+  text-align: center;
+  padding: 100px 20px 60px;
 }
 
-/* HEADINGS */
-h1, h2, h3 {
-  margin: 0;
+.main-title {
+  font-size: 50px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #38bdf8, #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-/* GLASS BOX (GLOBAL USE) */
-.box {
-  background: rgba(255,255,255,0.05);
+.subtitle {
+  margin-top: 10px;
+  opacity: 0.8;
+  font-size: 16px;
+}
+
+/* SERVICES SECTION */
+.services {
+  padding: 40px 20px 80px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+/* GRID LAYOUT */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* CARD DESIGN */
+.card {
+  position: relative;
+  padding: 30px;
   border-radius: 15px;
-  padding: 25px;
+  cursor: pointer;
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(255,255,255,0.1);
+
+  transition: all 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 0 25px rgba(56, 189, 248, 0.6);
 }
 
 /* CURSOR GLOW EFFECT */
-.box, .card {
-  position: relative;
-  overflow: hidden;
-}
-
-.box::before, .card::before {
+.card::before {
   content: "";
   position: absolute;
   top: var(--y);
@@ -49,6 +93,61 @@ h1, h2, h3 {
   transform: translate(-50%, -50%);
   width: 200px;
   height: 200px;
-  background: radial-gradient(circle, rgba(56,189,248,0.25), transparent);
-  pointer-events: none;
+  background: radial-gradient(circle, rgba(56,189,248,0.3), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+/* BOX (for other pages reuse) */
+.box {
+  position: relative;
+  padding: 30px;
+  border-radius: 15px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* SOCIAL BUTTONS */
+.socials {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.socials a {
+  display: block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.1);
+
+  transition: 0.3s;
+}
+
+/* SOCIAL HOVER */
+.socials a:hover {
+  transform: translateY(-5px);
+  background: rgba(56,189,248,0.5);
+  box-shadow: 0 0 15px rgba(56,189,248,0.6);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 36px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
 }
