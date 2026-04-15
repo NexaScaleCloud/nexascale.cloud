@@ -79,3 +79,9 @@
   box-shadow: 0 0 15px rgba(56,189,248,0.6);
 }
 
+
+/* FIX NAVBAR OVERLAP */
+.m365-container {
+  padding-top: 120px;
+}
+
