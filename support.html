@@ -1,26 +1,102 @@
-<div class="page-header">
-  <h1 class="page-title">Support Services</h1>
-  <p class="page-subtitle">Reliable IT Support & Managed Services for Your Business</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Support Services</title>
+
+  <!-- MAIN CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- GOOGLE FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo" onclick="location.href='index.html'">
+    NexaScale
+  </div>
+
+  <nav class="menu">
+    <a href="index.html">Home</a>
+    <a href="microsoft365.html">Microsoft 365</a>
+    <a href="#">Plans</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+<!-- BACKGROUND -->
+<canvas id="network"></canvas>
+
+<!-- MAIN CONTAINER -->
+<div class="m365-container">
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <h1 class="page-title">Support Services</h1>
+    <p class="page-subtitle">Reliable IT Support & Managed Services for Your Business</p>
+  </div>
+
+  <!-- SERVICE CARDS -->
+  <div class="m365-grid">
+
+    <div class="m365-card" onclick="showSupportService(event, 'helpdesk')">
+      Helpdesk Support
+    </div>
+
+    <div class="m365-card" onclick="showSupportService(event, 'monitoring')">
+      Monitoring & Maintenance
+    </div>
+
+    <div class="m365-card" onclick="showSupportService(event, 'managed')">
+      Managed IT Services
+    </div>
+
+    <div class="m365-card" onclick="showSupportService(event, 'consulting')">
+      IT Consulting & Advisory
+    </div>
+
+  </div>
+
+  <!-- DYNAMIC CONTENT -->
+  <div id="support-details" class="m365-details"></div>
+
+  <!-- BACK BUTTON -->
+  <div class="back-container">
+    <button class="back-btn" onclick="location.href='index.html'">
+      ← Back to Home
+    </button>
+  </div>
+
 </div>
 
-<div class="m365-grid">
+<!-- SOCIAL ICONS -->
+<div class="socials">
+  <a href="https://wa.me/919028575595?text=Hello%20NexaScale%2C%20I%20want%20more%20information" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 
-  <div class="m365-card" onclick="showSupportService(event, 'helpdesk')">
-    Helpdesk Support
-  </div>
+  <a href="#">
+    <i class="fab fa-linkedin"></i>
+  </a>
 
-  <div class="m365-card" onclick="showSupportService(event, 'monitoring')">
-    Monitoring & Maintenance
-  </div>
+  <a href="#">
+    <i class="fab fa-instagram"></i>
+  </a>
 
-  <div class="m365-card" onclick="showSupportService(event, 'managed')">
-    Managed IT Services
-  </div>
-
-  <div class="m365-card" onclick="showSupportService(event, 'consulting')">
-    IT Consulting & Advisory
-  </div>
-
+  <a href="#">
+    <i class="fab fa-facebook"></i>
+  </a>
 </div>
 
-<div id="support-details" class="m365-details"></div>
+<!-- JS FILE -->
+<script src="js/main.js"></script>
+<script src="js/support.js"></script>
+
+</body>
+</html>
