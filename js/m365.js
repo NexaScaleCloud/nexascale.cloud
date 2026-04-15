@@ -168,10 +168,93 @@ teams: [
     ]
   }
 ],
-    sharepoint: [
-      { title: "Documents", points: ["Storage", "Access control"] },
-      { title: "Automation", points: ["Workflow", "Approvals"] }
-    ],
+  sharepoint: [
+  {
+    title: "Governance & Information Architecture",
+    points: [
+      "We design a structured framework to organize, manage, and secure your company data efficiently."
+    ]
+  },
+  {
+    title: "Site Type Strategy (Team vs. Communication)",
+    points: [
+      "We deploy the right mix of Team Sites for collaboration and Communication Sites for company-wide updates."
+    ]
+  },
+  {
+    title: "Hub Site Configuration",
+    points: [
+      "We connect related sites under unified Hub Sites for seamless navigation and centralized search."
+    ]
+  },
+  {
+    title: "Advanced Permissions & Security Groups",
+    points: [
+      "We configure role-based access so users only see content relevant to their responsibilities."
+    ]
+  },
+  {
+    title: "Document Library & Metadata Design",
+    points: [
+      "We structure your document libraries using metadata for faster search, filtering, and organization."
+    ]
+  },
+  {
+    title: "Version Control & Co-Authoring",
+    points: [
+      "We enable real-time collaboration with version history to prevent data loss and duplication."
+    ]
+  },
+  {
+    title: "External Sharing Governance",
+    points: [
+      "We implement secure sharing controls for collaborating with external clients without compromising data."
+    ]
+  },
+  {
+    title: "Intranet Branding & Customization",
+    points: [
+      "We design your SharePoint intranet with your branding for a professional internal experience."
+    ]
+  },
+  {
+    title: "Workflow Automation (Power Automate)",
+    points: [
+      "We automate approvals and repetitive tasks to improve efficiency and reduce manual work."
+    ]
+  },
+  {
+    title: "OneDrive Sync Integration",
+    points: [
+      "We enable seamless file access by syncing SharePoint libraries with local devices."
+    ]
+  },
+  {
+    title: "Managed Metadata & Term Store",
+    points: [
+      "We standardize naming and classification for consistent data organization across your system."
+    ]
+  },
+  {
+    title: "Sensitivity Labels & Data Protection",
+    points: [
+      "We secure sensitive documents with restrictions on sharing, printing, and downloading."
+    ]
+  },
+  {
+    title: "Search Optimization & Indexing",
+    points: [
+      "We enhance search capabilities to help your team quickly find critical documents and resources."
+    ]
+  },
+  {
+    title: "Site Lifecycle & Archiving",
+    points: [
+      "We manage site lifecycle with automated archiving to reduce clutter and optimize storage."
+    ]
+  }
+],
+
     onedrive: [
       { title: "Storage", points: ["Cloud save", "Backup"] },
       { title: "Sync", points: ["Multi-device", "Real-time"] }
