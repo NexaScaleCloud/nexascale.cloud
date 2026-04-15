@@ -90,10 +90,7 @@ function showService(event, service) {
   {
     title: "Ongoing Health & License Optimization",
     points: [
-      "Regularly audit active users and service health",
-      "Downgrade underutilized licenses to reduce costs",
-      "Remove access for offboarded staff",
-      "Maintain a clean, secure, and optimized environment"
+          "Periodically review your setup to eliminate waste and secure offboarded accounts."
     ]
   }
 ],
