@@ -94,14 +94,86 @@ function showService(event, service) {
     ]
   }
 ],
-
-
-    
-    
-    teams: [
-      { title: "Meetings", points: ["Video calls", "Recording"] },
-      { title: "Channels", points: ["Team structure", "Chat system"] }
-    ],
+teams: [
+  {
+    title: "Teams Architecture Planning",
+    points: [
+      "Design a logical organizational structure by defining high-level Teams and focused Channels for efficient communication."
+    ]
+  },
+  {
+    title: "Global Admin Configuration",
+    points: [
+      "Set organization-wide defaults within the Teams Admin Center for chat, meetings, and data-sharing permissions."
+    ]
+  },
+  {
+    title: "Core Team & Channel Creation",
+    points: [
+      "Build dedicated workspaces for departments and projects to centralize searchable discussions and resources."
+    ]
+  },
+  {
+    title: "External & Guest Access Governance",
+    points: [
+      "Establish secure protocols for collaborating with external partners and vendors while maintaining internal data privacy."
+    ]
+  },
+  {
+    title: "SharePoint & OneDrive Backend Sync",
+    points: [
+      "Integrate Teams with Microsoft cloud storage to enable real-time document co-authoring and version control."
+    ]
+  },
+  {
+    title: "Standardized Naming Conventions",
+    points: [
+      "Apply a consistent naming framework to keep your digital workspace organized and scalable as the company grows."
+    ]
+  },
+  {
+    title: "Meeting & Live Event Policies",
+    points: [
+      "Standardize meeting lobby settings, recording rights, and screen-sharing rules for professional virtual engagement."
+    ]
+  },
+  {
+    title: "Teams Phone & Voice Integration",
+    points: [
+      "Configure cloud-based telephony, including auto-attendants and call queues, to unify business communications."
+    ]
+  },
+  {
+    title: "Third-Party App & Bot Integration",
+    points: [
+      "Connect productivity tools and automated bots directly into channels to streamline workflows."
+    ]
+  },
+  {
+    title: "Microsoft Copilot & AI Activation",
+    points: [
+      "Enable AI-driven features for meeting summaries, insights, and task tracking to improve productivity."
+    ]
+  },
+  {
+    title: "App Setup & Deployment Policies",
+    points: [
+      "Deploy Teams applications across corporate and mobile devices for a consistent user experience."
+    ]
+  },
+  {
+    title: "Lifecycle & Retention Management",
+    points: [
+      "Implement expiry policies to archive inactive teams and manage long-term data lifecycle."
+    ]
+  },
+  {
+    title: "Training & Adoption Rollout",
+    points: [
+      "Provide internal training, best practices, and onboarding to ensure full platform adoption."
+    ]
+  }
+],
     sharepoint: [
       { title: "Documents", points: ["Storage", "Access control"] },
       { title: "Automation", points: ["Workflow", "Approvals"] }
