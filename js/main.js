@@ -42,3 +42,53 @@ document.querySelectorAll(".box, .card").forEach(el => {
   });
 });
 
+function showHomeService(event, service) {
+  // remove active from all cards
+  document.querySelectorAll(".home-card").forEach(c => {
+    c.classList.remove("active");
+  });
+
+  // add active to clicked
+  event.currentTarget.classList.add("active");
+
+  // (OPTIONAL) details data
+  const data = {
+    cloud: [
+      { title: "Infrastructure", points: ["AWS", "Azure"] },
+      { title: "Scaling", points: ["Auto scale", "Load balance"] }
+    ],
+    security: [
+      { title: "Protection", points: ["Firewall", "Monitoring"] },
+      { title: "Compliance", points: ["Policies", "Audits"] }
+    ]
+  };
+
+  const container = document.getElementById("home-details");
+
+  if (!container) return; // safety
+
+  container.innerHTML = "";
+
+  if (!data[service]) return;
+
+  data[service].forEach(item => {
+    const box = document.createElement("div");
+    box.className = "box";
+
+    const h3 = document.createElement("h3");
+    h3.innerText = item.title;
+
+    const ul = document.createElement("ul");
+
+    item.points.forEach(p => {
+      const li = document.createElement("li");
+      li.innerText = p;
+      ul.appendChild(li);
+    });
+
+    box.appendChild(h3);
+    box.appendChild(ul);
+    container.appendChild(box);
+  });
+}
+
