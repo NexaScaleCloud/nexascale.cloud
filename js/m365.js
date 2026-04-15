@@ -99,7 +99,12 @@ function showService(event, service) {
       "Utilize the Admin Center to monitor service health, manage user roles, and enforce company-wide email policies."
     ]
   }
-
+  {
+    title: "Ongoing Health & License Optimization",
+    points: [
+      "-> Regularly audit your active users and service health to downgrade underutilized licenses (saving costs) and remove access for offboarded staff to maintain a clean, secure environment."
+    ]
+  }
 ],
     teams: [
       { title: "Meetings", points: ["Video calls", "Recording"] },
