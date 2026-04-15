@@ -42,8 +42,8 @@
 
 /* PAGE TITLE (M365) */
 .page-title {
-  font-size: 28px;
-  font-weight: 600;
+  font-size: 48px;
+  font-weight: 700;
   margin-bottom: 5px;
 
   background: linear-gradient(90deg, #38bdf8, #6366f1);
@@ -53,9 +53,9 @@
 
 /* SUBTITLE */
 .page-subtitle {
-  font-size: 14px;
-  opacity: 0.7;
-  margin-bottom: 20px;
+  font-size: 18px;
+  opacity: 0.8;
+  margin-bottom: 10px;
 }
 
 /* BACK BUTTON */
@@ -96,4 +96,10 @@
 .back-btn {
   display: inline-block;
   margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 32px;
+  }
 }
