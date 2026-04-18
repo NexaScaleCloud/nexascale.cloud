@@ -92,3 +92,20 @@ function showHomeService(event, service) {
   });
 }
 
+
+function openContactPopup() {
+  document.getElementById("contactPopup").style.display = "block";
+}
+
+function closeContactPopup() {
+  document.getElementById("contactPopup").style.display = "none";
+}
+
+/* Close when clicking outside */
+window.onclick = function(event) {
+  const popup = document.getElementById("contactPopup");
+  if (event.target === popup) {
+    popup.style.display = "none";
+  }
+};
+
